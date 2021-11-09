@@ -1,4 +1,11 @@
-const video = document.getElementById('video')
+var video = document.getElementById("video");
+
+navigator.mediaDevices.getUserMedia({video: true, audio: false})
+    .then(function(s) {
+    stream = s;
+    video.srcObject = s;
+    video.play();
+  })
 
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
@@ -29,3 +36,4 @@ video.addEventListener('play', () => {
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
   }, 100)
 })
+
