@@ -8,7 +8,7 @@
   <title>Document</title>
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
-  
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -26,7 +26,15 @@
   </style>
 </head>
 <body>
-  <video id="video" width="720" height="560" autoplay="true" muted></video>
-
+ <main>
+    <div class="controls">
+      <button id="button">Get camera</button>
+      <select id="select">
+        <option></option>
+      </select>
+    </div>
+    <video id="video" width="720" height="560" autoplay muted></video>
+    <!--<video id="video" autoplay playsinline></video>-->
+  </main>
 </body>
 </html>
