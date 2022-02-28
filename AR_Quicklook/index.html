@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <div>
-    <p>Click on the ball</p>
-    <a ref="ar" href="assets/models/toy_car.usdz">
-    </a>
-</div>
+  <model-viewer src="assets/models/Sphere.glb"
+  ios-src="assets/models/Sphere.usdz"
+  alt="A 3D model of an astronaut"
+  ar
+  auto-rotate
+  camera-controls></model-viewer>
 
+
+   
+</div>
 </body>
 </html>
